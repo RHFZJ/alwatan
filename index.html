@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div id="main">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images\alwatan.jpg" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li>عن الوطن</li>
+                        <li>تجدنا هنا</li>
+                        <li>جديدنا</li>
+                    </ul>
+                        
+                
+                </nav>
+            </div>
+            <div class="circle-box">
+                <svg height="402" width="402">
+                    <circle r="200" cx="201" cy="201" stroke-width="1px" stroke="gray" fill="none"/>
+                </svg>
+                <svg height="402" width="402">
+                    <circle r="200" cx="201" cy="201" stroke-width="1px" stroke="#fff" fill="none" id="svgCircle" />
+                </svg>
+                <div>
+                    <span id="step1"></span>
+                    <span id="step2"></span>
+                    <span id="step3"></span>
+                </div>
+
+                <div class="user-box" id="userBox">
+                    
+                        <div class="user">
+                            <img src="images/othman.jpg" alt="">
+                            <h1>عثمان الصيني</h1>
+                            <p> أكاديمي وصحفي وباحث سعودي،ورئيس تحرير صحيفة الوطن السعودية</p> 
+                        </div>
+
+                        <div class="user">
+                            <img src="images/jamal.jpg" alt="">
+                            <h1>جمال خاشقجي</h1>
+                            <p>تولّى منصب رئيس تحرير صحيفة الوطن اليومية عام 2004</p> 
+                        </div>
+                    
+                        <div class="user">
+                            <img src="images/saleh.jpg" alt="">
+                            <h1>صالح الشيحي</h1>
+                            <p>كاتب وصحفي في صحيفة الوطن</p> 
+                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var svgCircle = document.getElementById("svgCircle");
+            var step1 = document.getElementById("step1");
+            var step2 = document.getElementById("step2");
+            var step3 = document.getElementById("step3");
+            var main = document.getElementById("main");
+            var userBox = document.getElementById("userBox");
+
+            main.style.backgroundImage = "url(Images/gray.jpg)";
+
+            step1.addEventListener('click',()=>{
+                svgCircle.style.strokeDashoffset ="1004";
+                main.style.backgroundImage = "url(Images/blue.jpg)";
+                userBox.style.top = "-800px";
+            });
+            step2.addEventListener('click',()=>{
+                svgCircle.style.strokeDashoffset ="753";
+                main.style.backgroundImage = "url(Images/green.jpg)";
+                userBox.style.top = "-350px";
+            });
+            step3.addEventListener('click',()=>{
+                svgCircle.style.strokeDashoffset ="502";
+                main.style.backgroundImage = "url(Images/yellow.jpg)";
+                userBox.style.top = "100px";
+            });
+            
+        </script>
+
+    </body>
+</html>
